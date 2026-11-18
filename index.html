@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><style>#map{background:#D5DEE6}#map.lowz .city-lbl{display:none}</style></head><body>
-<title>Kingspan Isoeste — Inteligência Comercial DDD 66</title>
+<title>Kingspan Isoeste — Inteligência Comercial MT + MS</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#001F5C;color:#fff;overflow:hidden}
@@ -504,7 +504,7 @@ function initLeafletMap(){
   document.getElementById('map-loading').classList.add('hidden');
   buildKPIs();buildLegend();buildFatBars();buildTopCities();buildSegPills();buildBottomBar();
   lmap=L.map('map',{center:[-16.5,-54.8],zoom:5,zoomAnimation:false,fadeAnimation:false,markerZoomAnimation:false,preferCanvas:true});
-  var _ruas=L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:20,updateWhenIdle:true,keepBuffer:1});
+  var _ruas=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{attribution:'Mapa &copy; Esri, HERE, Garmin, OpenStreetMap',maxZoom:19,updateWhenIdle:true,keepBuffer:1});
   var _osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap contributors',subdomains:'abc',maxZoom:19,updateWhenIdle:true,keepBuffer:1});
   var _sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{attribution:'Imagens &copy; Esri',maxZoom:19,updateWhenIdle:true,keepBuffer:1});
   _ruas.addTo(lmap);
